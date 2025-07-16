@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search - Remote Internships</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .job-listing {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        .job-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .job-card h3 {
+            font-size: 22px;
+            color: #3498db;
+        }
+        .job-card p {
+            font-size: 16px;
+            color: #555;
+        }
+        .job-card a {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        .job-card a:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Explore Remote Internships</h1>
+    <p>Find the perfect internship for your skills and career growth!</p>
+</header>
+
+<main>
+    <section>
+        <button onclick="redirectToRemoteOK()">Search Remote Internships</button>
+    </section>
+    
+    <script>
+        function redirectToRemoteOK() {
+            window.location.href = "https://remoteok.com/remote-dev-jobs";  // You can change the URL as needed
+        }
+    </script>
+    
+</body>
+</html>
+<section id="job-list">
+    
+</section>
+
+</body>
+</html>
+    <section id="job-list">
+       
+    </section>
+
+    <section class="job-listing" id="job-container">
+        <div class="job-card">
+            <h3>Fiverr</h3> 
+            <p>One of the largest platforms for freelancers to offer services starting at $5.</p>
+            <a href="https://www.fiverr.com/" target="_blank">Explore Fiverr</a>
+        </div>
+        <div class="job-card">
+            <h3>Upwork</h3>
+            <p>Find freelance gigs in writing, tech, design, marketing, and more.</p>
+            <a href="https://www.upwork.com/" target="_blank">Visit Upwork</a>
+        </div>
+        <div class="job-card">
+            <h3>Internshala</h3>
+            <p>A go-to platform for students in India to find internships and trainings.</p>
+            <a href="https://internshala.com/" target="_blank">Visit Internshala</a>
+        </div>
+        <div class="job-card">
+            <h3>Freelancer</h3>
+            <p>Compete for projects and showcase your skills to earn globally.</p>
+            <a href="https://www.freelancer.com/" target="_blank">Go to Freelancer</a>
+        </div>
+        <div class="job-card">
+            <h3>We Work Remotely</h3>
+            <p>Trusted job board for remote work opportunities across the globe.</p>
+            <a href="https://weworkremotely.com/" target="_blank">Explore Jobs</a>
+        </div>
+        <div class="job-card">
+            <h3>Turing</h3>
+            <p>Work with top U.S. companies as a remote software developer.</p>
+            <a href="https://www.turing.com/" target="_blank">Work with Turing</a>
+        </div>
+    </section>
+    
+</main>
+
+<footer>
+    <p>&copy; © 2025 Hack and Viz 2.0 | Team HackTitans</p>
+</footer>
+
+</body>
+</html>

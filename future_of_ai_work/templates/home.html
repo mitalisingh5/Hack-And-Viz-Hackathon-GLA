@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI & Machine Learning Hackathon</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #3e5151, #decba4);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 20px 40px;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .content {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 800px;
+      width: 100%;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      margin-bottom: 40px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .content:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .content h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #ffe082;
+    }
+
+    .content p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #d1d1d1;
+    }
+
+    .section {
+      background-color: rgba(255, 255, 255, 0.1);
+      margin: 20px auto;
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 800px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .section h3 {
+      color: #ffcc80;
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+    }
+
+    .section ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .section ul li {
+      margin-bottom: 12px;
+      font-size: 1.05rem;
+      color: #e0f7fa;
+    }
+
+    .recommendation-section {
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 40px;
+      border-radius: 15px;
+      max-width: 800px;
+      margin: 20px auto;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .recommendation-section:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .recommendation-section h3 {
+      color: #ff9800;
+      margin-bottom: 15px;
+      font-size: 2rem;
+    }
+
+    .recommendation-section p {
+      color: #e0f7fa;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .recommendation-section button {
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #4db6ac;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .recommendation-section button:hover {
+      background-color: #00796b;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.2);
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        font-size: 1.8rem;
+      }
+
+      .content h2, .section h3 {
+        font-size: 1.5rem;
+      }
+
+      .content p, .section ul li {
+        font-size: 1rem;
+      }
+
+      .recommendation-section button {
+        font-size: 0.95rem;
+      }
+    }
+    .custom-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #4CAF50, #2E8B57);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.custom-button:hover {
+  background: linear-gradient(135deg, #2E8B57, #4CAF50);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+  </style>
+</head>
+<body>
+    <header>
+      Hack and Viz 2.0 – Team HackTitans
+    </header>
+  
+    <main>
+      <div class="content">
+        <h2>Welcome to Hack and Viz 2.0</h2>
+        <p>This hackathon unites forward-thinkers to reimagine the future of careers using Artificial Intelligence. Team <strong>HackTitans</strong> presents a powerful suite of tools to personalize, optimize, and transform how job seekers interact with opportunities and career guidance.</p>
+      </div>
+    </main>
+  
+    <!-- AI Recommendation System Project Section -->
+    <!-- AI Recommendation System Section -->
+<!-- Personality-Based Career Recommendations Section -->
+
+<!-- Existing Sections Below -->
+<div class="section">
+  <h3>AI Recommendation System</h3>
+  <p>
+    Our AI-powered recommendation system helps job seekers find the most relevant opportunities 
+    based on their skills, preferences, and career goals. Using machine learning, it analyzes profiles, 
+    job descriptions, and more to match users with the best-fit roles.
+  </p>
+  <div class="container">
+    <a href="{% url 'job_recommendation' %}" class="custom-button">Get AI Recommendations</a>
+  </div>
+</div>
+
+<!-- Remote Job Search Project Section -->
+<div class="section">
+  <h3>AI-Powered Job Search with Remote Opportunities</h3>
+  <p>
+    This feature enables users to explore remote job openings across various fields. It leverages AI 
+    to fetch real-time listings and filters them based on your profile, skills, and preferences.
+  </p>
+  <div class="container">
+    <a href="{% url 'job_list' %}" class="custom-button">View Remote Job Listings</a>
+  </div>
+</div>
+
+<!-- AI Mentor for Interview Preparation Section -->
+<div class="section">
+  <h3>AI Mentor for Interview Preparation</h3>
+  <p>
+    Ek AI mentor create karein jo interview preparation ke liye mock interviews de sake. Yeh mentor 
+    users ko feedback dega aur unki interview performance ko improve karne ke liye suggestions dega. 
+    This interactive tool analyzes answers and gives personalized suggestions using NLP and AI techniques.
+  </p>
+  <div class="container">
+    <a class="custom-button">Start Interview Practice</a>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Personality-Based Career Recommendations</h3>
+  <p>
+    Discover career paths that align with your personality traits. This tool helps users who may not know about MBTI types 
+    like INFP or ESTJ by offering easy-to-understand descriptions. Just choose the one that matches you best, and get a 
+    tailored career suggestion based on AI analysis.
+  </p>
+  <div class="container">
+    <a class="custom-button">Find Your Ideal Career</a>
+  </div>
+</div>
+<!-- Interview Questions CSV Viewer Section -->
+
+      <!-- Core Features Section -->
+    <div class="section">
+      <h3>Core Features</h3>
+      <ul>
+        <li>📄 <strong>AI-Powered Resume Customizer</strong></li>
+        <li>📈 <strong>AI Career Path Predictor (Dynamic Career Progression)</strong></li>
+        <li>💼 <strong>Interactive Job Matchmaking Platform (Live Job Matching)</strong></li>
+        <li>🧠 <strong>AI Mentor for Interview Preparation</strong></li>
+        <li>🕳️ <strong>AI-Powered Skill Gap Analyzer</strong></li>
+        <li>🎯 <strong>Personality-Based Career Recommendations</strong></li>
+        <li>🌐 <strong>AI-Powered Job Search with Remote Opportunities</strong></li>
+        <li>🤝 <strong>Skill-based Volunteering Opportunities for Students</strong></li>
+        <li>⚖️ <strong>Job Compatibility Scorer with Life Goals</strong></li>
+        <li>💬 <strong>AI-Driven Emotional Intelligence Training</strong></li>
+      </ul>
+    </div>
+  
+    <!-- Team Section -->
+    <div class="section">
+      <h3>Meet the Team</h3>
+      <ul>
+        <li><strong>Mitali Singh</strong></li>
+        <li><strong>Varun Gupta</strong></li>
+        <li><strong>Shailesh Gole</strong></li>
+        <li><strong>Saumya Singh</strong></li>
+      </ul>
+    </div>
+  
+    <!-- About the Project Section -->
+    <div class="section">
+      <h3>About the Project</h3>
+      <p>
+        Team <strong>HackTitans</strong> presents a comprehensive AI-powered career platform, merging cutting-edge 
+        machine learning and natural language processing to revolutionize how individuals plan and pursue their professional journey.
+      </p>
+      <ul>
+        <li>🚀 Intelligent job matching with live remote listings</li>
+        <li>🎓 Personalized career guidance using psychological and skill-based profiling</li>
+        <li>📝 AI-driven resume customization and gap analysis</li>
+        <li>🤖 Interview mentorship and emotional intelligence simulations</li>
+      </ul>
+      <p>
+        Empowering students, job seekers, and career changers with the right tools to thrive in an AI-first job market.
+      </p>
+    </div>
+  
+    <footer>
+      &copy; 2025 Hack and Viz 2.0 | Team HackTitans
+    </footer>
+  </body>
+  </html>

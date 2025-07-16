@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Recommendations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .job-form {
+            margin-top: 50px;
+        }
+        .job-form input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+        }
+        .job-form button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .job-form button:hover {
+            background-color: #45a049;
+        }
+        .job-recommendations {
+            margin-top: 30px;
+        }
+        .job-recommendations ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .job-recommendations li {
+            background-color: #fff;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .back-button {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f44336;
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .back-button:hover {
+            background-color: #e53935;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Find Jobs Based on Your Skills</h1>
+    <p>Enter your skills and get job recommendations.</p>
+</header>
+
+<div class="container">
+    <div class="job-form">
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="skills_input" placeholder="Enter your skills (e.g., Python, React, AWS)" required>
+            <button type="submit">Get Job Recommendations</button>
+        </form>
+    </div>
+
+    {% if recommended_jobs %}
+    <div class="job-recommendations">
+        <h2>Top Job Recommendations for Your Skills:</h2>
+        <ul>
+            {% for job, score in recommended_jobs %}
+            <li>{{ job }} - Match Score: {{ score }}%</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    <a href="{% url 'home' %}" class="back-button">Back to Home</a>
+</div>
+
+</body>
+</html>
