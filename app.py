@@ -1,40 +1,59 @@
 import streamlit as st
-from career_predictor import run_career_predictor
-from resume_analyzer import run_resume_analyzer
-from job_match_finder import run_job_match
-from interview_qa import run_interview_qa
+import pandas as pd
 
-# Sidebar navigation
-st.sidebar.title("🚀 Hack-Viz Dashboard")
-choice = st.sidebar.radio("Select a Feature", [
-    "🏠 Home",
-    "📈 Career Path Predictor",
-    "📄 Resume Analyzer",
-    "🔎 Job Match Finder",
-    "🤖 Interview Q&A"
-])
+# Sidebar menu
+st.sidebar.title("Hack-Viz Dashboard 🚀")
+menu = st.sidebar.radio(
+    "Choose a Module:",
+    ["Home", "📈 Career Path Predictor", "📄 Resume Analyzer", "🔎 Job Match Finder", "🤖 Interview Q&A"]
+)
 
-# Feature routing
-if choice == "🏠 Home":
+# Home page
+if menu == "Home":
     st.title("Hack-Viz – GLA Hackathon App 🚀")
-    st.markdown("""
-    Welcome to Hack-Viz — your AI Career Companion!
+    st.markdown("Welcome to the all-in-one career intelligence platform!")
+
+# Career Path Predictor
+elif menu == "📈 Career Path Predictor":
+    st.title("📈 AI Career Path Predictor")
+    st.write("Upload student profile data to predict future roles.")
     
-    Use the sidebar to explore:
-    - 📈 Career Path Prediction  
-    - 📄 Resume Analyzer  
-    - 🔎 Job Matching  
-    - 🤖 Interview Prep
-    """)
+    file = st.file_uploader("Upload student data (CSV/XLSX)", type=['csv', 'xlsx'])
+    if file:
+        if file.name.endswith(".csv"):
+            df = pd.read_csv(file)
+        else:
+            df = pd.read_excel(file)
+        st.dataframe(df.head())
+        st.success("Data loaded successfully!")
+        # Add mock predictions or model integration here
 
-elif choice == "📈 Career Path Predictor":
-    run_career_predictor()
+# Resume Analyzer
+elif menu == "📄 Resume Analyzer":
+    st.title("📄 Resume Analyzer")
+    uploaded_file = st.file_uploader("Upload your resume (docx/pdf not yet supported)", type=['csv', 'txt'])
+    if uploaded_file:
+        content = uploaded_file.read().decode("utf-8")
+        st.text_area("Resume Content", content, height=300)
+        st.info("Feature: Add NLP scoring or keyword matcher here")
 
-elif choice == "📄 Resume Analyzer":
-    run_resume_analyzer()
+# Job Match Finder
+elif menu == "🔎 Job Match Finder":
+    st.title("🔎 Job Match Finder")
+    st.write("Explore job-market data and find matching roles.")
+    file = st.file_uploader("Upload job market data (CSV)", type=['csv'])
+    if file:
+        df = pd.read_csv(file)
+        st.dataframe(df.head())
+        st.success("Job market data loaded!")
+        # Add filters or profile-matching logic here
 
-elif choice == "🔎 Job Match Finder":
-    run_job_match()
-
-elif choice == "🤖 Interview Q&A":
-    run_interview_qa()
+# Interview Q&A
+elif menu == "🤖 Interview Q&A":
+    st.title("🤖 AI Interview Mentor")
+    st.write("Practice interviews with AI-generated questions.")
+    
+    question_df = pd.read_csv("Questions.csv")
+    if not question_df.empty:
+        st.write("Random Interview Question:")
+        st.info(question_df.sample(1).iloc[0][0])
