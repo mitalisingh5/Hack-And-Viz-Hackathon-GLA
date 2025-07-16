@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # Sidebar menu
-st.sidebar.title("Hack-Viz Dashboard 🚀")
+st.sidebar.title(" WELCOME TO STUDWORK 🚀")
 menu = st.sidebar.radio(
     "Choose a Module:",
     ["Home", "📈 Career Path Predictor", "📄 Resume Analyzer", "🔎 Job Match Finder", "🤖 Interview Q&A"]
@@ -10,7 +10,7 @@ menu = st.sidebar.radio(
 
 # Home page
 if menu == "Home":
-    st.title("Hack-Viz – GLA Hackathon App 🚀")
+    st.title("STUDWORK🚀")
     st.markdown("Welcome to the all-in-one career intelligence platform!")
 
 # Career Path Predictor
